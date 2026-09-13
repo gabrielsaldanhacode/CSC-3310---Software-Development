@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Detroit Date Spots</title>
+    <!-- This links to your CSS file that we will build in Step 5 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Semantic Tag 1: Header for the top of the page -->
+    <header>
+        <h1>Metro Detroit Best Date Spots</h1>
+        <p>Your monthly guide to the perfect night out.</p>
+    </header>
+
+    <!-- Semantic Tag 2: Main wraps the core content -->
+    <main>
+        
+        <!-- Section 1: The Interactive Map -->
+        <!-- Semantic Tag 3: Section -->
+        <section id="map-section">
+            <h2>Explore the Map</h2>
+            
+            <div id="map-container">
+                <!-- The required image with alt text -->
+                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRiyANwP-ohc7g9bdRr8Y3yMqhzeRwpNhbVHsSaW4Jr_bvVbsi8P9_UT8JN2hb0wputvIud51B2UcyBfaw" alt="Map of the Metro Detroit area" id="detroit-map">
+                
+                <!-- Our 'Pins' that we will position later with CSS -->
+                <!-- We are using data-attributes here just like your course video taught! -->
+                <button class="map-pin" data-spot="livonia">Livonia</button>
+                <button class="map-pin" data-spot="dearborn">Dearborn</button>
+                <button class="map-pin" data-spot="downtown">Downtown Detroit</button>
+            </div>
+
+            <!-- Semantic Tag 4: Article for the spot description -->
+            <!-- This is the box that will change when a pin is clicked -->
+            <article id="spot-details">
+                <h3 id="spot-title">Click a pin on the map</h3>
+                <p id="spot-description">Select an area to see this month's featured date spot.</p>
+            </article>
+        </section>
+
+        <!-- Section 2: The Suggestion Form -->
+        <section id="suggestion-section">
+            <h2>Know a great spot?</h2>
+            <p>Tell us where we should feature next month!</p>
+            
+            <!-- The required Form -->
+            <form id="suggest-form">
+                <label for="spot-name">Name of the place:</label>
+                <input type="text" id="spot-name" required>
+                
+                <label for="why-great">Why is it a great date spot?</label>
+                <textarea id="why-great" required></textarea>
+                
+                <button type="submit">Submit Suggestion</button>
+            </form>
+            
+            <!-- A hidden message we will reveal with JavaScript later -->
+            <p id="thank-you-message" style="display: none;">Thanks for the recommendation!</p>
+        </section>
+
+    </main>
+
+    <!-- Section 3 / Semantic Tag 5: Footer for the bottom -->
+    <footer>
+        <p>Built for CSC-3310 Software Development</p>
+    </footer>
+
+    <!-- This links to your JavaScript file that we will build in Step 6 -->
+    <script src="script.js"></script>
+</body>
+</html>
